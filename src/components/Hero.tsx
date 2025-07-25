@@ -46,11 +46,14 @@ const Hero: React.FC<HeroProps> = ({ onScrollToAbout }) => {
           </a>
         </div>
         <span className="text-white/60 text-lg mt-2 tracking-wide">Explore my portfolio below!</span>
+        {/* Added margin to push scroll indicator further down */}
+        <div className="mt-12" />
       </motion.div>
-      {/* Modernized scroll indicator */}
+
+      {/* Scroll indicator arrow with extra spacing */}
       <button
         onClick={onScrollToAbout}
-        className="absolute bottom-14 left-1/2 -translate-x-1/2 animate-bounce z-10"
+        className="absolute bottom-2 left-1/2 -translate-x-1/2 animate-bounce z-10"
         aria-label="Scroll to About"
       >
         <svg width="48" height="48" fill="none" viewBox="0 0 24 24" stroke="url(#scrollGradient)" className="w-12 h-12 drop-shadow-xl">
@@ -63,8 +66,10 @@ const Hero: React.FC<HeroProps> = ({ onScrollToAbout }) => {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
         </svg>
       </button>
+
       {/* Animated gradient background overlay */}
       <div className="absolute inset-0 pointer-events-none z-0 animate-gradient-move" />
+
       <style>{`
         .neon-btn {
           box-shadow: 0 0 16px 2px #00eaff99, 0 0 32px 4px #a855f799;

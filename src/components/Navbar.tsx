@@ -16,7 +16,7 @@ const Navbar = () => {
         <li><Link to="/certifications" className="relative neon-link">Certifications</Link></li>
         <li><Link to="/roles" className="relative neon-link">Achievements</Link></li>
         <li><Link to="/contact" className="relative neon-link">Contact</Link></li>
-        <li><a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="relative neon-link">Resume</a></li>
+        <li><a href="https://drive.google.com/file/d/16GrM1S9U-YBTzLGntEmxcL29aCHmv9S_/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="relative neon-link">Resume</a></li>
       </ul>
       <style>{`
         .neon-link {

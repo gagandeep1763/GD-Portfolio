@@ -64,7 +64,7 @@ const About: React.FC<AboutProps> = ({ onScrollToProjects }) => {
                 'C++', 'Python', 'C', 'JavaScript', 'SQL', 'Solidity',
                 'HTML', 'CSS', 'React.js', 'TailwindCSS', 'Figma', 'Canva', 'Wix', 'Wireframing', 'Prototyping', 'User Research',
                 'TensorFlow', 'OpenCV', 'Power BI', 'Microsoft Excel', 'Pandas', 'NumPy', 'Matplotlib', 'MySQL', 'MongoDB',
-                'Git', 'GitHub', 'VS Code', 'Web3.js', 'MetaMask', 'Smart Contracts (Basic)'
+                'Git', 'GitHub', 'VS Code', 'Web3.js', 'MetaMask'
               ].map((tech) => (
                 <span key={tech} className="neon-pill text-base px-4 py-2">
                   {tech}
@@ -77,7 +77,7 @@ const About: React.FC<AboutProps> = ({ onScrollToProjects }) => {
       {onScrollToProjects && (
         <button
           onClick={onScrollToProjects}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce z-10"
+          className="absolute bottom-3 left-1/2 -translate-x-1/2 animate-bounce z-10"
           aria-label="Scroll to Projects"
         >
           <svg width="48" height="48" fill="none" viewBox="0 0 24 24" stroke="url(#aboutScrollGradient)" className="w-12 h-12 drop-shadow-xl">
