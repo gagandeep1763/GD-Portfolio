@@ -1,8 +1,4 @@
 import React from 'react';
-import crypto from '../assets/crypto.jpeg';
-import voting from '../assets/voting.png';
-import food from '../assets/food.png';
-import k8s from '../assets/k8s.png';
 import project1 from '../assets/Project 1.png';
 import project2 from '../assets/Project 2.png';
 import project3 from '../assets/project 3.png';
@@ -15,7 +11,7 @@ interface Project {
   features: string[];
   image: string;
   github: string;
-  imageClass?: string; // Added for custom image class
+  imageClass?: string;
 }
 
 const projects: Project[] = [
@@ -29,7 +25,7 @@ const projects: Project[] = [
       "Login & Registration with localStorage for session management",
       "Real-time campaign tracking and donation interface with role-based navigation."
     ],
-    image: project1, // Updated image for Antifrauds and Secure Funding Using Blockchain
+    image: project1,
     github: "https://github.com/gagandeep1763/Antifraud-and-Secure-funding-using-blockchain",
   },
   {
@@ -42,7 +38,7 @@ const projects: Project[] = [
       "Text to Sign: Translates text into ISL animations via gloss mapping",
       "Learn Sign Language: Interactive learning with pose visuals and glosses"
     ],
-    image: project2, // Updated image for Sign Ease
+    image: project2,
     github: "https://sign-ease-dhanush-g-ms-projects.vercel.app/",
     imageClass: "w-32 h-32 object-contain object-center rounded-lg shadow-md group-hover:brightness-110 transition duration-300 border-2 border-white/20 bg-white"
   },
@@ -56,7 +52,7 @@ const projects: Project[] = [
       "Real-time earnings calculation from completed work",
       "Responsive UI with secure backend integration"
     ],
-    image: project3, // Updated image for Freelance Project Tracker
+    image: project3,
     github: "https://github.com/gagandeep1763/Freelance-Project-Tracker",
     imageClass: "w-32 h-32 object-cover object-top rounded-lg shadow-md group-hover:brightness-110 transition duration-300 border-2 border-white/20"
   },
@@ -70,16 +66,9 @@ const projects: Project[] = [
       "Emergency support features like Code Blue/Purple, chatbot, and direct call",
       "Clean, accessible UI for fast and intuitive user experience"
     ],
-    image: project4, // Updated image for Aid Point
+    image: project4,
     github: "https://www.figma.com/proto/AHKtUdx7kApxSxxDhl0fzj/Aid-Point?node-id=6-3&p=f&t=3ajAIu49N1RCodcG-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=6%3A3",
   },
-];
-
-const aosAnimations = [
-  'fade-up',
-  'zoom-in',
-  'slide-left',
-  'fade-up',
 ];
 
 interface ProjectsProps {
@@ -112,17 +101,12 @@ const Projects: React.FC<ProjectsProps> = ({ onScrollToSkills }) => {
               <h2 className="text-2xl font-bold mb-2 text-white/90">{project.title}</h2>
               <div className="flex flex-wrap gap-2 mb-3">
                 {project.tags.map((tag, i) => (
-                  <span
-                    key={i}
-                    className="neon-pill"
-                  >
-                    {tag}
-                  </span>
+                  <span key={i} className="neon-pill">{tag}</span>
                 ))}
               </div>
               <p className="text-white/80 mb-3">{project.description}</p>
               <div className="mb-4">
-                <h4 className="text-sm font-semibold mb-1 text-cyan-300"> KEY FEATURES</h4>
+                <h4 className="text-sm font-semibold mb-1 text-cyan-300">KEY FEATURES</h4>
                 <ul className="list-disc list-inside text-sm text-white/70">
                   {project.features.map((feature, i) => (
                     <li key={i}>{feature}</li>
@@ -135,12 +119,17 @@ const Projects: React.FC<ProjectsProps> = ({ onScrollToSkills }) => {
                 rel="noopener noreferrer"
                 className="inline-block mt-2 px-5 py-2 bg-gradient-to-r from-cyan-500 to-fuchsia-500 text-white text-sm rounded-full shadow-xl neon-btn hover:scale-105 transition-transform duration-300 font-bold"
               >
-                 {project.title.startsWith('Aid Point') ? 'View the prototype design' : 'View Code'}
+                {project.title.includes('Sign Ease')
+                  ? 'View the Live Demo'
+                  : project.title.startsWith('Aid Point')
+                  ? 'View the prototype design'
+                  : 'View Code'}
               </a>
             </div>
           </div>
         ))}
       </div>
+
       {onScrollToSkills && (
         <button
           onClick={onScrollToSkills}
@@ -158,7 +147,7 @@ const Projects: React.FC<ProjectsProps> = ({ onScrollToSkills }) => {
           </svg>
         </button>
       )}
-      {/* Animated gradient overlay */}
+
       <div className="absolute inset-0 pointer-events-none z-0 animate-gradient-move" />
       <style>{`
         .glass-card {
