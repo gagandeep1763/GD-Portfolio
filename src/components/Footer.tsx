@@ -17,7 +17,7 @@ const Footer = () => {
         </p>
         <div className="flex space-x-6 text-2xl">
           <a
-            href="mailto:gagandeepd@email.com"
+            href="mailto:gaganreachsky73@gmail.com"
             className="neon-icon"
             aria-label="Email"
           >
@@ -33,7 +33,7 @@ const Footer = () => {
             <FaLinkedin />
           </a>
           <a
-            href="https://github.com/gagandeepd"
+            href="github.com/gagandeep1763"
             target="_blank"
             rel="noopener noreferrer"
             className="neon-icon"
