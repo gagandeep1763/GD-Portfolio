@@ -33,7 +33,7 @@ const Footer = () => {
             <FaLinkedin />
           </a>
           <a
-            href="github.com/gagandeep1763"
+            href="https://github.com/gagandeep1763"
             target="_blank"
             rel="noopener noreferrer"
             className="neon-icon"
@@ -45,7 +45,7 @@ const Footer = () => {
       </div>
       <style>{`
         .neon-icon {
-          color: #fff;
+          color: #ffffff;
           text-shadow: 0 0 8px #00eaff, 0 0 16px #a855f7;
           transition: color 0.2s, text-shadow 0.2s, transform 0.2s;
         }
